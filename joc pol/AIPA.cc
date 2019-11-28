@@ -22,18 +22,15 @@ struct PLAYER_NAME : public Player {
    * Types and attributes for your player can be defined here.
    */
 
-/* -----PATHFINDING ALGOS-------*/
+/* ---------------------------------------PATHFINDING ALGOS-----------------------------------------*/
 
-
-
-
+//---------DIJKSTRA-----------------------//
 
 const double infinit     = numeric_limits<double>::infinity();
 
 typedef pair<double, int> WArc;
 typedef vector<vector<WArc>> WGraph;
-// weighted arc
-// weighted digraf
+
 void dijkstra(const WGraph& G, int s, vector<double>& d, vector<int>& p) {
     int n = G.size();
     d = vector<double>(n, infinit); d[s] = 0;
@@ -58,19 +55,42 @@ void dijkstra(const WGraph& G, int s, vector<double>& d, vector<int>& p) {
         }
     }
  }
+ 
+ //-----------END --- DIJKSTRA--------------//
 
 
-/* ----- AUX ALGOS ---- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------AUX ALGOS-----------------------------------------*/
 
 
     int postover(Pos p){
         return p.i*60 + p.j;
     }
+    
+    WGraph gridtograph(){
+        WGraph G
+        for(int i= 0; i<60; ++i){
+            for(int j=0; j<60; ++j){
+                
+            }
+    }
 
 
-/* ------CELL INFO------*/
+/* ---------------------------------------CELL INFO-----------------------------------------*/
 
-//Cell to Graph
 
 
 
